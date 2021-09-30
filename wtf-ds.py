@@ -12,7 +12,10 @@ except ImportError:
 
 
 MAX_STRING_LENGTH = 36
-MAX_VALUES_TO_SHOW = 3
+try:
+    MAX_VALUES_TO_SHOW = int(sys.argv[1])
+except IndexError:
+    MAX_VALUES_TO_SHOW = 3
 
 KEY_COLOR = "green"
 TYPE_COLOR = 129
