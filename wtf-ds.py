@@ -245,7 +245,7 @@ class ValueAggregator(BaseAggregator):
         agg.cnt += 1
 
     def __str__(self):
-        return ", ".join(f"{Ccnt(agg.cnt)}×{Ctype(agg.TYPE_NAME)}({agg})" for tn, agg in sorted(self.by_type.items(), key=lambda x: (x[1], x[0])))
+        return ", ".join(f"{Ccnt(agg.cnt)}×{Ctype(agg.TYPE_NAME)}({agg})" for tn, agg in sorted(self.by_type.items()))
 
     def print(self, prefix=''):
         for t, agg in self.by_type.items():
