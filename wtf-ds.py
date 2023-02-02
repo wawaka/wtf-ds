@@ -253,8 +253,6 @@ class ValueAggregator(BaseAggregator):
 
 
 def main():
-    res = collections.defaultdict(IntegerAggregator)
-
     v = ValueAggregator()
 
     for line in sys.stdin:
